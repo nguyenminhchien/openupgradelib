@@ -86,7 +86,7 @@ def convert_html_fragment(html_string, replacements, pretty_print=True):
             fragment = fromstring(html_string)
         else:
             fragment = fromstring(
-                "<fragment_wrapper>{}</fragment_wrapper>".format(html_string)
+                u"<fragment_wrapper>{}</fragment_wrapper>".format(html_string)
             )
     except Exception:
         logging.error("Failure converting string to DOM:\n%s", html_string)
